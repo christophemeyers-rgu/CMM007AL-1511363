@@ -85,7 +85,7 @@ else{
 
 <main>
 
-    <div >
+    <div  align="center">
 
         <form action="add.php" method="post">
             <table>
