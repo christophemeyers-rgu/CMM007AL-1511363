@@ -7,7 +7,38 @@
  */
 
 
+if($_SERVER['REQUEST_METHOD']==='POST'){
+    $db = new MySQLi(
+        "ap-cdbr-azure-east-c.cloudapp.net",
+        "becd1536e6553c",
+        "f13cc5a6",
+        "CMM007ALDB-1511363"
+    );
 
+    $title = $_POST["Title"];
+    $summary = $_POST["Summary"];
+    $category = $_POST["Category"];
+    $author = $_POST["Author"];
+
+
+    $query = "INSERT INTO blogview (entryTitle, entrySummary, Category, submitter)
+              VALUES(?,?,'".$category."',?) ";
+
+    $stmt = $db->prepare($query);
+
+    $stmt->bind_param("sss",$title,$summary,$author);
+    $stmt->execute() or die("Error: ".$query."<br>".$db->error);
+
+    $db->close();
+
+    header("Location: blog.php");
+}
+elseif($_SERVER['REQUEST_METHOD']==='GET'){
+
+}
+else{
+    header("Location: index.php");
+}
 ?>
 
 <!DOCTYPE html>
@@ -56,7 +87,7 @@
 
     <div id="Form" align="center">
 
-        <form>
+        <form action="add.php" method="post">
             <table>
                 <tr>
                     <td>
