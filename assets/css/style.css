@@ -31,7 +31,7 @@ li{
     background-color: #78ffd2;
 }
 
-
+/*
 main{
     max-width: 960px;
     margin-right: auto;
@@ -39,7 +39,7 @@ main{
     display: flex;
     display: -webkit-flex;
     flex-direction: row-reverse;
-}
+}*/
 
 footer{
     max-width: 960px;
