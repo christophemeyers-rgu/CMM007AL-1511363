@@ -6,6 +6,27 @@
  * Time: 10:58
  */
 
+$db = new MySQLi(
+    "ap-cdbr-azure-east-c.cloudapp.net",
+    "becd1536e6553c",
+    "f13cc5a6",
+    "CMM007ALDB-1511363"
+);
+
+$query = "SELECT *
+          FROM blogview";
+
+$stmt = $db->prepare($query);
+
+$stmt->execute() or die("Error: ".$query."<br>".$db->error);
+
+$stmt->store_result();
+
+$result = $stmt->get_result();
+
+$num_of_rows = $stmt->num_rows;
+
+
 ?>
 
 <!DOCTYPE html>
@@ -52,18 +73,38 @@
 
 <main>
 
-    <h3>Today at work by Adam</h3>
+    <?php
+    if($num_of_rows>1)
+    {
+        while($row= $result->fetch_assoc())
+        {
+            ?>
 
-    <p>Work</p>
+            <p>
+                <?php
+                echo $row["entryTitle"];
+                if($row["submitter"]!=NULL){
+                    echo " by ".$row["submitter"];
+                }
+                ?>
+            </p>
+            <p>
+                <?php
+                echo $row["entryCategory"];
+                ?>
+            </p>
+            <p>
+                <?php
+                echo $row["entrySummary"];
+                ?>
+            </p>
 
-    <p>Today I went to work and did lots of very complicated coding things. I was very pleased that I managed to finish them all</p>
+            <?php
+        }
+    }
+    ?>
 
 
-    <h3>University Lecturer by Brian</h3>
-
-    <p>University</p>
-
-    <p>This week in university I had an amazing lecture. I can’t remember the name of the lecturer but he was really really good.</p>
 </main>
 
 <footer>
