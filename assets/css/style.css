@@ -56,6 +56,10 @@ main{
     margin: 20px auto 20px auto;
 }
 
+.blogentry{
+    margin: 10px 0 10px 0;
+}
+
 footer{
     max-width: 640px;
     height: 100px;
