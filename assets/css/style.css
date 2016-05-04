@@ -31,15 +31,15 @@ li{
     background-color: #78ffd2;
 }
 
-/*
+
 main{
     max-width: 960px;
     margin-right: auto;
     margin-left: auto;
-    display: flex;
+/*    display: flex;
     display: -webkit-flex;
-    flex-direction: row-reverse;
-}*/
+    flex-direction: row-reverse;*/
+}
 
 footer{
     max-width: 960px;
