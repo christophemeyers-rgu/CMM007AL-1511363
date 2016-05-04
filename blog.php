@@ -88,31 +88,32 @@ else{
         while($row= $result->fetch_assoc())
         {
             ?>
-
-            <p>
-                <?php
-                echo $row["entryTitle"];
-                if($row["submitter"]!=NULL){
-                    echo " by ".$row["submitter"];
-                }
-                ?>
-            </p>
-            <p>
-                <?php
-                echo $row["category"];
-                ?>
-            </p>
-            <p>
-                <?php
-                echo $row["entrySummary"];
-                ?>
-            </p>
+                <div class="blogentry">
+                    <h3>
+                        <?php
+                        echo $row["entryTitle"];
+                        if($row["submitter"]!=NULL){
+                            echo " by ".$row["submitter"];
+                        }
+                        ?>
+                    </h3>
+                    <p>
+                        <?php
+                        echo $row["category"];
+                        ?>
+                    </p>
+                    <p>
+                        <?php
+                        echo $row["entrySummary"];
+                        ?>
+                    </p>
+                </div>
 
             <?php
         }
     }
     else{
-        echo "No rows found.";
+        echo "No data found.";
     }
     ?>
 
