@@ -17,10 +17,28 @@ if($db->connect_errno){
     die('Connectfailed['.$db->connect_error.']');
 }
 else{
-    $query = "SELECT *
+
+    if(isset($_GET['category'])){
+        $query = "SELECT *
+                  FROM blogview
+                  WHERE category = ?";
+
+        $stmt = $db->prepare($query);
+
+        $stmt->bind_param("s",$_GET["category"]);
+
+        $stmt->execute() or die("Error: ".$query."<br>".$db->error);
+
+        $result = $stmt->get_result();
+    }
+    else{
+        $query = "SELECT *
           FROM blogview";
 
-    $result = $stmt = $db->query($query) or die("Error: ".$query."<br>".$db->error);
+        $result = $db->query($query) or die("Error: ".$query."<br>".$db->error);
+    }
+
+
 
 //    $result = $stmt->execute() ;
 
