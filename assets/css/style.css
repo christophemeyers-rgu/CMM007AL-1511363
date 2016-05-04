@@ -61,7 +61,6 @@ form{
 }
 
 textarea{
-    border: none;
     width: 100%;
     -webkit-box-sizing: border-box; /* <=iOS4, <= Android  2.3 */
     -moz-box-sizing: border-box; /* FF1+ */
