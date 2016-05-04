@@ -35,3 +35,11 @@ main{
     display: -webkit-flex;
     flex-direction: row-reverse;
 }
+
+footer{
+    max-width: 960px;
+    height: 100px;
+    margin-right: auto;
+    margin-left: auto;
+    /*text-align: center;*/
+}
