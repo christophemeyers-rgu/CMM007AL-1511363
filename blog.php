@@ -20,9 +20,9 @@ else{
     $query = "SELECT *
           FROM blogview";
 
-    $stmt = $db->query($query);
+    $result = $stmt = $db->query($query) or die("Error: ".$query."<br>".$db->error);
 
-    $result = $stmt->execute() or die("Error: ".$query."<br>".$db->error);
+//    $result = $stmt->execute() ;
 
     $db->close();
 
