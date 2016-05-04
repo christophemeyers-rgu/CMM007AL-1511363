@@ -13,18 +13,25 @@ $db = new MySQLi(
     "CMM007ALDB-1511363"
 );
 
-$query = "SELECT *
+if($db->connect_errno){
+    die('Connection failed:'.connect_error);
+}
+else{
+    $query = "SELECT *
           FROM blogview";
 
-$stmt = $db->prepare($query);
+    $stmt = $db->prepare($query);
 
-$stmt->execute() or die("Error: ".$query."<br>".$db->error);
+    $stmt->execute() or die("Error: ".$query."<br>".$db->error);
 
-$stmt->store_result();
+    $stmt->store_result();
 
-$result = $stmt->get_result();
+    $result = $stmt->get_result();
 
-$num_of_rows = $stmt->num_rows;
+    $num_of_rows = $stmt->num_rows;
+}
+
+
 
 
 ?>
