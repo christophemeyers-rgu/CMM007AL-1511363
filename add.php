@@ -90,7 +90,7 @@ else{
         <form action="add.php" method="post">
             <table>
                 <tr>
-                    <td>
+                    <td class="descriptions">
                         Entry Title:
                     </td>
                     <td>
@@ -98,7 +98,7 @@ else{
                     </td>
                 </tr>
                 <tr>
-                    <td>
+                    <td class="descriptions">
                         Entry Summary:
                     </td>
                     <td>
@@ -106,7 +106,7 @@ else{
                     </td>
                 </tr>
                 <tr>
-                    <td>
+                    <td class="descriptions">
                         Category:
                     </td>
                     <td>
@@ -118,7 +118,7 @@ else{
                     </td>
                 </tr>
                 <tr>
-                    <td>
+                    <td class="descriptions">
                         Submitted By:
                     </td>
                     <td>
