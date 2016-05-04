@@ -94,7 +94,7 @@ else{
                         Entry Title:
                     </td>
                     <td>
-                        <input type="text" name="Title" required>
+                        <input class="textbox" type="text" name="Title" required>
                     </td>
                 </tr>
                 <tr>
@@ -102,7 +102,7 @@ else{
                         Entry Summary:
                     </td>
                     <td>
-                        <textarea name="Summary" required></textarea>
+                        <textarea class="textbox" name="Summary" required></textarea>
                     </td>
                 </tr>
                 <tr>
@@ -110,7 +110,7 @@ else{
                         Category:
                     </td>
                     <td>
-                        <select name="Category" required>
+                        <select class="textbox" name="Category" required>
                             <option value="Work">Work</option>
                             <option value="University">University</option>
                             <option value="Family">Family</option>
@@ -122,7 +122,7 @@ else{
                         Submitted By:
                     </td>
                     <td>
-                        <input type="text" name="Author">
+                        <input class="textbox" type="text" name="Author">
                     </td>
                 </tr>
                 <tr>
