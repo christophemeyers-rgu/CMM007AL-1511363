@@ -14,21 +14,23 @@ $db = new MySQLi(
 );
 
 if($db->connect_errno){
-    die('Connection failed:'.connect_error);
+    die('Connectfailed['.$db->connect_error.']');
 }
 else{
     $query = "SELECT *
           FROM blogview";
 
-    $stmt = $db->prepare($query);
+    $stmt = $db->query($query);
 
-    $stmt->execute() or die("Error: ".$query."<br>".$db->error);
+    $result = $stmt->execute() or die("Error: ".$query."<br>".$db->error);
 
-    $stmt->store_result();
+    $db->close();
+
+/*    $stmt->store_result();
 
     $result = $stmt->get_result();
 
-    $num_of_rows = $stmt->num_rows;
+    $num_of_rows = $stmt->num_rows;*/
 }
 
 
@@ -81,7 +83,7 @@ else{
 <main>
 
     <?php
-    if($num_of_rows>1)
+    if(mysqli_num_rows($result)>1)
     {
         while($row= $result->fetch_assoc())
         {
@@ -108,6 +110,9 @@ else{
 
             <?php
         }
+    }
+    else{
+        echo "No rows found.";
     }
     ?>
 
