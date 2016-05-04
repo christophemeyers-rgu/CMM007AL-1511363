@@ -10,7 +10,6 @@ header{
 
 .title{
     margin: 0 0 0 0;
-    paddign: 0 0 0 0;
 }
 
 nav{
@@ -31,7 +30,7 @@ li{
     display: inline-block;
     text-align: center;
     padding: 2px 2px 2px 2px;
-    margin: 0 10px 10px 10px;
+    margin: 5px 10px 10px 10px;
     background-color: #f37c1b;
 
 }
