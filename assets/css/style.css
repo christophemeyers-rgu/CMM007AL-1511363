@@ -60,17 +60,10 @@ form{
 
 }
 
-/*textarea{
-    width: 200px;
+textarea{
+    heigth: 150px;
 }
 
-input{
-    width: 200px;
-}
-
-select{
-    width: 200px;
-}*/
 
 .textbox{
     width: 180px;
