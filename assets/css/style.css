@@ -53,11 +53,12 @@ main{
 }
 
 #Form{
-    margin: 20px auto 20px auto;
     padding: 20px 0;
 }
 
 form{
+    margin: 20px auto 20px auto;
+
     padding: 40px 0;
 
 }
