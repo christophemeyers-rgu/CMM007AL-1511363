@@ -99,7 +99,7 @@ else{
             </p>
             <p>
                 <?php
-                echo $row["entryCategory"];
+                echo $row["category"];
                 ?>
             </p>
             <p>
