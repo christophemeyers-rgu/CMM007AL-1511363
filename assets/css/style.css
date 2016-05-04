@@ -64,6 +64,10 @@ textarea{
     width: 210px;
 }
 
+input{
+    width: 210px;
+}
+
 .blogentry{
     padding: 30px 0 10px 0;
 
