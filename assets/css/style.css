@@ -63,6 +63,10 @@ main{
     /*background-color: aqua;*/
 }
 
+p.italic{
+    font-style: italic;
+}
+
 footer{
     max-width: 640px;
     height: 100px;

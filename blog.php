@@ -115,7 +115,7 @@ else{
                         }
                         ?>
                     </h3>
-                    <p>
+                    <p class="italic">
                         <?php
                         echo $row["category"];
                         ?>
